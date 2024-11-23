@@ -1,5 +1,5 @@
 export default class Id {
-  static novo(): string {
+  static new(): string {
     return `${this.hash()}-${this.hash()}-${this.hash()}`;
   }
 

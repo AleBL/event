@@ -1,5 +1,5 @@
 export default class Alias {
-  static formatar(valor: string): string {
-    return valor.replace(/ /g, "-").toLowerCase();
+  static format(value: string): string {
+    return value.replace(/ /g, "-").toLowerCase();
   }
 }

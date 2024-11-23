@@ -1,2 +1,2 @@
-export * from "./evento";
+export * from "./event";
 export * from "./shared";

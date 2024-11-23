@@ -13,9 +13,10 @@ export default function Logo() {
       <Image src="/logo.svg" width={50} height={50} alt="Logo" />
       <h1 className="flex flex-col items-center text-lg leading-5">
         <div>
-          CONVIT<span className="text-blue-500">3</span>
+          DIGITAL
+          <br /> 
+          INVITATION
         </div>
-        <div>DIGITAL</div>
       </h1>
     </Link>
   );

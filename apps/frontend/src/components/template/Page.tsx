@@ -1,11 +1,11 @@
 import Logo from "./Logo";
 
-export interface PaginaProps {
+export interface PageProps {
   children: React.ReactNode;
   className?: string;
 }
 
-export default function Pagina(props: PaginaProps) {
+export default function Page(props: PageProps) {
   return (
     <div
       className="

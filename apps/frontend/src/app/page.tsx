@@ -1,11 +1,11 @@
-import Pagina from "@/components/template/Pagina";
-import { Evento } from "@/core";
+import Page from "@/components/template/Page";
+import { Event } from "@/core";
 
 export default function Home() {
-  const e: Partial<Evento> = {};
+  const e: Partial<Event> = {};
   return (
-    <Pagina className="w-full">
+    <Page className="w-full">
       <div>Inicio</div>
-    </Pagina>
+    </Page>
   );
 }

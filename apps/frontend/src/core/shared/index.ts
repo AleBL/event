@@ -1,6 +1,6 @@
 import Alias from "./Alias";
 import Id from "./Id";
-import Senha from "./Senha";
-import Data from "./Data";
+import Password from "./Password";
+import EventDate from "./EventDate";
 
-export { Alias, Id, Senha, Data };
+export { Alias, Id, Password, EventDate };
