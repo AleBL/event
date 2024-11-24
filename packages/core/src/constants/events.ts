@@ -2,7 +2,7 @@ import { Event } from '../event'
 
 const events: Event[] = [
     {
-        id: "nvydj48ooz8-tdudqu2bqbb-3a6ifnb56o6",
+        id: "b3d05d8c-df47-48e8-b1ff-45047b93f597",
         alias: 'evento-fullstack',
         password: 'senha123',
         name: 'Evento de Desenvolvimento Fullstack',
@@ -16,7 +16,7 @@ const events: Event[] = [
         expectedAudience: 200,
         quests: [
             {
-                id: "w874k77gbms-9cd456cqgql-cw7exv2ukpr",
+                id: "d8c81b16-06cb-4eaa-b7f7-405a4a91083a",
                 name: 'Alice Silva',
                 email: 'alice@example.com',
                 confirmed: true,
@@ -24,7 +24,7 @@ const events: Event[] = [
                 countCompanions: 1,
             },
             {
-                id: "z89aao6ea3-axeqs72otyg-zlc50wawv3k",
+                id: "a7ffa3de-9874-4216-b435-da05a816d3ef",
                 name: 'Carlos Pereira',
                 email: 'carlos@example.com',
                 confirmed: false,
@@ -32,7 +32,7 @@ const events: Event[] = [
                 countCompanions: 0,
             },
             {
-                id: "h3m7jfva92s-qx63zhom3g-nmjyrlc1tfg",
+                id: "5b22441a-6341-4d9d-8132-ed121eaf70bd",
                 name: 'Beatriz Lima',
                 email: 'beatriz@example.com',
                 confirmed: true,
@@ -42,7 +42,7 @@ const events: Event[] = [
         ],
     },
     {
-        id: "fwmzhk1jqs-gwmxquiscav-1cyg5u5907t",
+        id: "ab4bb11c-820b-4d8b-86a4-c3027be9e628",
         alias: 'evento-js-avancado',
         password: 'js2024',
         name: 'Workshop Avançado de JavaScript',
@@ -55,7 +55,7 @@ const events: Event[] = [
         expectedAudience: 100,
         quests: [
             {
-                id: "7cyqc0twz5y-2sucbf0jovs-cpbekkfakli",
+                id: "3f806c82-b179-423d-9aef-4037a530403a",
                 name: 'Eduardo Santos',
                 email: 'eduardo@example.com',
                 confirmed: true,
@@ -63,7 +63,7 @@ const events: Event[] = [
                 countCompanions: 0,
             },
             {
-                id: "i7pkqxaf13r-kyrsd8mfgq-uu6sr90jb3i",
+                id: "503a2255-afed-4b4b-9af7-9cf8f50d813a",
                 name: 'Fernanda Costa',
                 email: 'fernanda@example.com',
                 confirmed: true,
@@ -73,7 +73,7 @@ const events: Event[] = [
         ],
     },
     {
-        id: "9crb9co4qxh-5ntkvcbhqyp-e1d746316j8",
+        id: "6fe680e9-d438-4600-9a73-81b29eb368fc",
         alias: 'evento-dev-frontend',
         password: 'front123',
         name: 'Bootcamp de Desenvolvimento Frontend',
@@ -86,7 +86,7 @@ const events: Event[] = [
         expectedAudience: 150,
         quests: [
             {
-                id: "wimzd9s57y-pkj9lukq81g-g1d7kuvgysi",
+                id: "1f8512b2-97ac-4aea-8f8c-702e7d3a43f2",
                 name: 'Gabriela Rocha',
                 email: 'gabriela@example.com',
                 confirmed: true,
@@ -94,7 +94,7 @@ const events: Event[] = [
                 countCompanions: 1,
             },
             {
-                id: "t8yojwi43-pmpicwmn9ye-80rcxt87b4v",
+                id: "9addbc5a-99a4-4a4a-b9ac-c04b680752f8",
                 name: 'Hugo Nogueira',
                 email: 'hugo@example.com',
                 confirmed: false,
@@ -102,7 +102,7 @@ const events: Event[] = [
                 countCompanions: 0,
             },
             {
-                id: "04t2c7sb4hzi-ckgsgi5zbee-989zx2lmhj7",
+                id: "b6e623bc-545c-490f-845e-552ef40409d6",
                 name: 'Isabela Martins',
                 email: 'isabela@example.com',
                 confirmed: true,
@@ -112,7 +112,7 @@ const events: Event[] = [
         ],
     },
     {
-        id: "59vgq7gwuv4-vi16qe00ain-opskpwwenp8",
+        id: "ea9960ec-9141-4267-9fbc-a9344b31f55f",
         alias: 'casamento-alberto-marina',
         password: 'casamento2024',
         name: 'Casamento do Alberto e Marina',
@@ -126,7 +126,7 @@ const events: Event[] = [
         expectedAudience: 150,
         quests: [
             {
-                id: "gwimrh11z2p-6t1dscgq9uf-t58g79fmty",
+                id: "d9966f94-87d3-4362-a02f-b7bf57c31030",
                 name: 'Bruno Cardoso',
                 email: 'bruno@example.com',
                 confirmed: true,
@@ -134,7 +134,7 @@ const events: Event[] = [
                 countCompanions: 1,
             },
             {
-                id: "hezaz9aecka-i05euzpor7-816019rrczc",
+                id: "e86b4e29-0323-48f9-9d07-66b7e98caeaa",
                 name: 'Carla Mendes',
                 email: 'carla@example.com',
                 confirmed: true,
@@ -144,7 +144,7 @@ const events: Event[] = [
         ],
     },
     {
-        id: "0mxwskp9gkub-q1k52kymqnm-bmdljhon2vq",
+        id: "68708d83-0e08-4ce9-accf-d02128ca7f40",
         alias: 'aniversario-joao',
         password: 'joao2024',
         name: 'Aniversário do João - 30 Anos',
@@ -158,7 +158,7 @@ const events: Event[] = [
         expectedAudience: 80,
         quests: [
             {
-                id: "l7arz1zdgxf-yhl3qdg9m6f-6tdi4y1klev",
+                id: "6872c076-5c84-499c-bb3e-eedb95bcfe6b",
                 name: 'Maria Souza',
                 email: 'maria@example.com',
                 confirmed: true,
@@ -166,7 +166,7 @@ const events: Event[] = [
                 countCompanions: 2,
             },
             {
-                id: "zyfl5l4ex-w9z74n17lj8-c5z3nrzuwxi",
+                id: "56589b05-2fec-4256-88a4-795ed2a5d0a6",
                 name: 'José Almeida',
                 email: 'jose@example.com',
                 confirmed: false,
@@ -176,7 +176,7 @@ const events: Event[] = [
         ],
     },
     {
-        id: "i4p53wdnonk-6nr41r1hgj-aq0gtnrvv2r",
+        id: "f8f22297-0878-435b-b4fe-b813181b43f1",
         alias: 'inauguracao-loja-estrela',
         password: 'estrela2024',
         name: 'Inauguração da Loja Estrela',
@@ -190,7 +190,7 @@ const events: Event[] = [
         expectedAudience: 300,
         quests: [
             {
-                id: "7h9cnh2gucp-dkini0wk4es-kbgxyr8pv6",
+                id: "778bb05d-678e-4da9-a66e-e06f4d2d11f1",
                 name: 'Cláudia Lima',
                 email: 'claudia@example.com',
                 confirmed: true,
@@ -198,7 +198,7 @@ const events: Event[] = [
                 countCompanions: 3,
             },
             {
-                id: "byffhy9w9-jjys9obnf8c-02nxvar4agi5",
+                id: "1951a783-b087-4cce-ae54-281084b5c821",
                 name: 'Ricardo Barbosa',
                 email: 'ricardo@example.com',
                 confirmed: true,
@@ -208,7 +208,7 @@ const events: Event[] = [
         ],
     },
     {
-        id: "occ776n58qr-m9x5mq739j-3c78bvcsuk4",
+        id: "90cefb61-0100-4bbe-9776-329b4edabc70",
         alias: 'reuniao-familia-oliveira',
         password: 'familia2024',
         name: 'Reunião da Família Oliveira',
@@ -221,7 +221,7 @@ const events: Event[] = [
         expectedAudience: 50,
         quests: [
             {
-                id: "ojetje4n8p-afm2fmjnt1-zny605typr",
+                id: "d4ded1af-55a7-4a09-94fb-b7653cf64868",
                 name: 'Thiago Oliveira',
                 email: 'thiago@example.com',
                 confirmed: true,
@@ -229,7 +229,7 @@ const events: Event[] = [
                 countCompanions: 4,
             },
             {
-                id: "qy5nwv0pz6j-ekps7zoff8c-nryqh5jmq6",
+                id: "76fe6974-f0ad-447f-9bb6-78a4cd33a9c2",
                 name: 'Letícia Oliveira',
                 email: 'leticia@example.com',
                 confirmed: true,
@@ -241,3 +241,4 @@ const events: Event[] = [
 ]
 
 export default events
+
