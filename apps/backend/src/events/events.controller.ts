@@ -9,6 +9,17 @@ export class EventsController {
         return events.map(this.serializeEvent);
     }
 
+    @Post("acess")
+    async acessEvent(@Body() body: { id: string, password: string }) {
+        const event = events.find((event) => event.id === body.id && event.password === body.password);
+        
+        if (!event) {
+            throw new Error("Event not found");
+        }
+
+        return this.serializeEvent(event);
+    }
+
 
     private serializeEvent(event: Event) {
         if (!event) return null;
