@@ -35,6 +35,19 @@ export class EventsController {
         return { valid: !event || event.id === id };
     }
 
+    @Post()
+    async createEvent(@Body() event: Event) {
+        const eventPersisted = events.find((ev) => ev.alias === event.alias);
+        
+        if (eventPersisted && eventPersisted.id !== event.id) {
+            throw new Error("Event already exists");
+        }
+
+        const eventComplete = this.deserializeEvent(event);
+        events.push(eventComplete);
+        return this.serializeEvent(eventComplete);
+    }
+
 
     private serializeEvent(event: Event) {
         if (!event) return null;
@@ -44,4 +57,10 @@ export class EventsController {
         };
     }
 
+    private deserializeEvent(event: any): Event {
+        return {
+            ...event,
+            date: EventDate.parse(event.date)
+        };
+    }
 }
