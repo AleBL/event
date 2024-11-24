@@ -1,4 +1,4 @@
-import { Id } from "@/core/shared";
+import { Id } from "../../shared";
 import Quest from "../model/Quest";
 
 export default function createEmptyGuest(): Partial<Quest> {

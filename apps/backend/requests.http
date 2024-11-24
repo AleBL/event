@@ -1,0 +1,63 @@
+GET http://localhost:3001/ping
+
+###
+GET http://localhost:3001/events
+
+###
+GET http://localhost:3001/events/ab4bb11c-820b-4d8b-86a4-c3027be9e628
+
+###
+GET http://localhost:3001/events/validate/evento-fullstack/ab4bb11c-820b-4d8b-86a4-c3027be9e628
+
+###
+POST http://localhost:3001/events/acess
+Content-Type: application/json
+
+{
+    "id": "68708d83-0e08-4ce9-accf-d02128ca7f40",
+    "password": "joao2024"
+}
+
+###
+POST http://localhost:3001/events/evento-fullstack/quest
+Content-Type: application/json
+
+{
+    "name": "Teste Convidado",
+    "email": "teste@envio.com",
+    "confirmed": true,
+    "hasCompanions": true,
+    "countCompanions": 10
+}
+
+###
+POST http://localhost:3001/events
+Content-Type: application/json
+
+{
+    "name": "Evento Ano Novo Test2",
+    "alias": "ano-novo-teste2",
+    "date": "2028-12-31T23:59",
+    "local": "Brasil Todo",
+    "description": "Comemorar virada ano",
+    "password": "teste123456",
+    "image": "https://images.squarespace-cdn.com/content/v1/55b7e44de4b0af4724ac5dd6/ad3872eb-0dbb-4abf-b855-df0c6114ba02/sylvester-g406905444_1920.jpg",
+    "imageBackground": "https://images.squarespace-cdn.com/content/v1/55b7e44de4b0af4724ac5dd6/ad3872eb-0dbb-4abf-b855-df0c6114ba02/sylvester-g406905444_1920.jpg",
+    "expectedAudience": 9999,
+    "quests": [
+        {
+            "name": "Teste Convidado",
+            "email": "teste@convidado.com",
+            "confirmed": true,
+            "hasCompanions": true,
+            "countCompanions": 2
+        },
+        {
+            "name": "Teste Convidado 2",
+            "email": "teste2@convidado.com",
+            "confirmed": false,
+            "hasCompanions": true,
+            "countCompanions": 5
+        }
+    ]
+}

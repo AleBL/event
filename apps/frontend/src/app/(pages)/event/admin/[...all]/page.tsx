@@ -1,7 +1,7 @@
 "use client";
 import DashboardEvent from "@/components/event/DashboardEvent";
 import FormEventPassword from "@/components/event/FormEventPassword";
-import { Event,events, Quest } from "@/core";
+import { Event,events, Quest } from "core";
 import { use, useEffect, useState } from "react";
 
 export default function PageAdminEvent(props: any) {

@@ -1,6 +1,5 @@
 import BigLogo from "@/components/template/BigLogo";
-import Page from "@/components/template/Page";
-import { Event } from "@/core";
+import { Event } from "core";
 import Link from "next/link";
 
 export default function Home() {

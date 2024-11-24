@@ -1,5 +1,5 @@
 import QuestItem from "@/components/event/QuestItem";
-import { Quest } from "@/core";
+import { Quest } from "core";
 
 export interface ListQuestProps {
     quests: Quest[];

@@ -1,5 +1,5 @@
 import Info from "@/components/shared/Info";
-import { Event } from "@/core";
+import { Event } from "core";
 
 export interface InfoEventProps {
     event: Event;
