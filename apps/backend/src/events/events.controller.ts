@@ -48,6 +48,17 @@ export class EventsController {
         return this.serializeEvent(eventComplete);
     }
 
+    @Post(':alias/quest')
+    async createQuest(@Param('alias') alias: string, @Body() quest: Quest) {
+        const event = events.find((event) => event.alias === alias);
+        
+        if (!event) {
+            throw new Error("Event not found");
+        }
+        
+        event.quests.push(completeQuest(quest));
+        return this.serializeEvent(event);
+    }
 
     private serializeEvent(event: Event) {
         if (!event) return null;
