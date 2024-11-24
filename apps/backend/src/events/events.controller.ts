@@ -20,6 +20,15 @@ export class EventsController {
         return this.serializeEvent(event);
     }
 
+    @Get(':idOrAlias')
+    async getEvent(@Param('idOrAlias') idOrAlias: string) {
+        if(Id.valid(idOrAlias)) {
+            return this.serializeEvent(events.find((e) => e.id === idOrAlias));
+        } else {
+            return this.serializeEvent(events.find((e) => e.alias === idOrAlias));
+        }
+    }
+
 
     private serializeEvent(event: Event) {
         if (!event) return null;
