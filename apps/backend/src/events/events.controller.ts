@@ -1,20 +1,27 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
-import { completeQuest, Event, EventDate, events, Id, Quest } from 'core';
+import { completeEvent, completeQuest, Event, EventDate, Id, Quest } from 'core';
+import { EventPrisma } from 'src/events/event.prisma';
 
 @Controller('events')
 export class EventsController {
+    constructor(readonly eventPrisma: EventPrisma) {}
 
     @Get()
     async getEvents() {
+        const events = await this.eventPrisma.getAll();
         return events.map(this.serializeEvent);
     }
 
     @Post("acess")
     async acessEvent(@Body() body: { id: string, password: string }) {
-        const event = events.find((event) => event.id === body.id && event.password === body.password);
+        const event = await this.eventPrisma.getById(body.id);
         
         if (!event) {
             throw new Error("Event not found");
+        }
+
+        if (event.password !== body.password) {
+            throw new Error("Invalid password");
         }
 
         return this.serializeEvent(event);
@@ -22,41 +29,43 @@ export class EventsController {
 
     @Get(':idOrAlias')
     async getEvent(@Param('idOrAlias') idOrAlias: string) {
+        let event: Event;
         if(Id.valid(idOrAlias)) {
-            return this.serializeEvent(events.find((e) => e.id === idOrAlias));
+            event = await this.eventPrisma.getById(idOrAlias);
         } else {
-            return this.serializeEvent(events.find((e) => e.alias === idOrAlias));
+            event = await this.eventPrisma.getByAlias(idOrAlias);
         }
+
+        return this.serializeEvent(event);
     }
 
     @Get('/validate/:alias/:id')
     async getValidateAlias(@Param('alias') alias: string, @Param('id') id: string) {
-        const event = events.find((event) => event.alias === alias);
+        const event = await this.eventPrisma.getByAlias(alias);
         return { valid: !event || event.id === id };
     }
 
     @Post()
     async createEvent(@Body() event: Event) {
-        const eventPersisted = events.find((ev) => ev.alias === event.alias);
-        
-        if (eventPersisted && eventPersisted.id !== event.id) {
+        const eventPersisted = await this.eventPrisma.getByAlias(event.alias);
+
+        if (eventPersisted) {
             throw new Error("Event already exists");
         }
 
-        const eventComplete = this.deserializeEvent(event);
-        events.push(eventComplete);
-        return this.serializeEvent(eventComplete);
+        const eventComplete = completeEvent(this.deserializeEvent(event));
+        await this.eventPrisma.saveEvent(eventComplete);
     }
 
     @Post(':alias/quest')
     async createQuest(@Param('alias') alias: string, @Body() quest: Quest) {
-        const event = events.find((event) => event.alias === alias);
-        
+        const event = await this.eventPrisma.getByAlias(alias);
         if (!event) {
             throw new Error("Event not found");
         }
         
-        event.quests.push(completeQuest(quest));
+        const questComplete = completeQuest(quest);
+        await this.eventPrisma.saveQuest(event, questComplete);
         return this.serializeEvent(event);
     }
 

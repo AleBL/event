@@ -7,7 +7,12 @@ export class EventPrisma {
     constructor(readonly prisma: PrismaProvider) {}
 
     saveEvent(event: Event) {
-        return this.prisma.event.create({ data: event as any });
+        return this.prisma.event.create({
+            data: {
+                ...(event as any),
+                quests: { create: event.quests }
+            }
+        });
     }
 
     saveQuest(event: Event, quest: Quest) {
