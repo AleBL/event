@@ -4,9 +4,10 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "dev": "run-p dev:*",
+    "dev": "run-p packages:* dev:*",
     "dev:frontend": "cd apps/frontend && npm run dev",
-    "dev:backend": "cd apps/backend && npm run dev"
+    "dev:backend": "cd apps/backend && npm run dev",
+    "packages:core": "cd packages/core && npm run dev"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,7 @@
   "dependencies": {
     "npm-run-all": "^4.1.5"
   },
-  "worckspaces": [
+  "workspaces": [
     "apps/*",
     "packages/*"
   ]
