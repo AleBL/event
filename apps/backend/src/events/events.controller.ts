@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, HttpException, Param, Post } from '@nestjs/common';
 import { completeEvent, completeQuest, Event, EventDate, Id, Quest } from 'core';
 import { EventPrisma } from 'src/events/event.prisma';
 
@@ -14,14 +14,14 @@ export class EventsController {
 
     @Post("acess")
     async acessEvent(@Body() body: { id: string, password: string }) {
-        const event = await this.eventPrisma.getById(body.id);
+        const event = await this.eventPrisma.getById(body.id, true);
         
         if (!event) {
-            throw new Error("Event not found");
+            throw new HttpException("Event not found", 404);
         }
 
         if (event.password !== body.password) {
-            throw new Error("Invalid password");
+            throw new HttpException("Invalid password", 401);
         }
 
         return this.serializeEvent(event);
@@ -50,7 +50,7 @@ export class EventsController {
         const eventPersisted = await this.eventPrisma.getByAlias(event.alias);
 
         if (eventPersisted) {
-            throw new Error("Event already exists");
+            throw new HttpException("Event already exists", 409);
         }
 
         const eventComplete = completeEvent(this.deserializeEvent(event));
@@ -61,7 +61,7 @@ export class EventsController {
     async createQuest(@Param('alias') alias: string, @Body() quest: Quest) {
         const event = await this.eventPrisma.getByAlias(alias);
         if (!event) {
-            throw new Error("Event not found");
+            throw new HttpException("Event not found", 404);
         }
         
         const questComplete = completeQuest(quest);
