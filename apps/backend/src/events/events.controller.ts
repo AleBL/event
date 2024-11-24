@@ -29,6 +29,12 @@ export class EventsController {
         }
     }
 
+    @Get('/validate/:alias/:id')
+    async getValidateAlias(@Param('alias') alias: string, @Param('id') id: string) {
+        const event = events.find((event) => event.alias === alias);
+        return { valid: !event || event.id === id };
+    }
+
 
     private serializeEvent(event: Event) {
         if (!event) return null;
