@@ -2,7 +2,7 @@ import AcessViaQrCode from "@/components/event/AcessViaQrCode";
 import InfoEvent from "@/components/event/InfoEvent";
 import ListQuest from "@/components/event/ListQuest";
 import Statistic from "@/components/shared/Statistic";
-import { Event, Quest } from "@/core";
+import { Event, Quest } from "core";
 
 export interface DashboardEventProps {
     event: Event;
