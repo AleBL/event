@@ -1,6 +1,6 @@
 import { Event } from '../event'
 
-const eventos: Event[] = [
+const events: Event[] = [
     {
         id: "nvydj48ooz8-tdudqu2bqbb-3a6ifnb56o6",
         alias: 'evento-fullstack',
@@ -240,4 +240,4 @@ const eventos: Event[] = [
     },
 ]
 
-export default eventos
+export default events
